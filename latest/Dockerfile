@@ -53,7 +53,10 @@ RUN echo \
   && if [[ ! -e /usr/bin/pip ]]; then ln -sf /usr/bin/pip3 /usr/bin/pip; fi
 
 # since we will be "always" mounting the volume, we can set this up
-RUN pip install lxml
+RUN pip install lxml 
+RUN pip install requests
+RUN pip install argparse
+
 
 
 ENTRYPOINT ["/usr/bin/dumb-init"]
