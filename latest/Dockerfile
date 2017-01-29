@@ -20,7 +20,7 @@ ENV PACKAGES="\
   ca-certificates \
   python3 \
   python3-dev \
-  lxml\
+  python3-lxml \
 "
 
 RUN echo \
