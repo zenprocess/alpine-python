@@ -20,6 +20,8 @@ ENV PACKAGES="\
   ca-certificates \
   python3 \
   python3-dev \
+  libxml2-dev \
+   libxslt-dev \
 "
 
 RUN echo \
