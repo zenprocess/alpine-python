@@ -21,8 +21,9 @@ ENV PACKAGES="\
   bash \
   git \
   ca-certificates \
-  python2.7 \
-  python2.7-dev \
+  python2 \
+  python2-dev \
+  py-setuptools \
   libxml2-dev \
   libxslt-dev \
 "
