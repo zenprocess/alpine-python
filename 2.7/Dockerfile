@@ -11,6 +11,8 @@ FROM alpine:3.4
 #   * python: the binaries themselves
 #   * python-dev: are used for gevent e.g.
 #   * py-setuptools: required only in major version 2, installs easy_install so we can install Pip.
+
+
 ENV PACKAGES="\
   dumb-init \
   musl \
@@ -19,9 +21,10 @@ ENV PACKAGES="\
   bash \
   git \
   ca-certificates \
-  python2 \
-  python2-dev \
-  py-setuptools \
+  python3 \
+  python3-dev \
+  libxml2-dev \
+   libxslt-dev \
 "
 
 RUN echo \
@@ -50,6 +53,13 @@ RUN echo \
   && pip install --upgrade pip \
   && if [[ ! -e /usr/bin/pip ]]; then ln -sf /usr/bin/pip2.7 /usr/bin/pip; fi \
   && echo
+
+
+RUN pip install lxml 
+RUN pip install requests
+RUN pip install argparse
+RUN pip install xmljson
+
 
 # since we will be "always" mounting the volume, we can set this up
 ENTRYPOINT ["/usr/bin/dumb-init"]
