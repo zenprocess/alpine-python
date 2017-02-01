@@ -56,6 +56,8 @@ RUN echo \
 RUN pip install lxml 
 RUN pip install requests
 RUN pip install argparse
+RUN pip install xmljson
+RUN pip install json
 
 
 
