@@ -21,10 +21,8 @@ ENV PACKAGES="\
   bash \
   git \
   ca-certificates \
-  python3 \
-  python3-dev \
   libxml2-dev \
-   libxslt-dev \
+  libxslt-dev \
 "
 
 RUN echo \
