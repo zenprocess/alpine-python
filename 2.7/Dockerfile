@@ -62,6 +62,7 @@ RUN pip install argparse
 RUN pip install xmljson
 RUN pip install bs4
 RUN pip install selenium
+RUN pip install nltk
 
 
 # since we will be "always" mounting the volume, we can set this up
